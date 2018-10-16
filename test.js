@@ -1,6 +1,6 @@
 
 
-// jQuery.post( "https://api.rescuegroups.org/http/v2.json", { func: "animals" }, function( data ) {
+// jQuery.post( "https://api.rescuegroups.org/https/v2.json", { func: "animals" }, function( data ) {
 //     console.log( data );
 //   }, "json");
 //   jQuery.ajax({
@@ -39,7 +39,7 @@
 // let data = JSON.stringify(dataObject);
   
 // $.getJSON({
-//     url: 'https://api.rescuegroups.org/http/v2.json',
+//     url: 'https://api.rescuegroups.org/https/v2.json',
 //     type: 'post',
 //     contentType: 'application/json',
 //     data: data,
@@ -49,14 +49,14 @@
 //     }
 // });
 
-// $.getJSON('http://api.petfinder.com/my.method?format=json&key=12345&callback=?')
+// $.getJSON('https://api.petfinder.com/my.method?format=json&key=12345&callback=?')
 //   .done(function(petApiData) { alert('Data retrieved!'; })
 //   .error(function(err) { alert('Error retrieving data!'); 
 // });
 
 var shelterIds = []
 document.addEventListener('DOMContentLoaded', bindButtons);
-// var url = 'http://api.petfinder.com/shelter.find';
+// var url = 'https://api.petfinder.com/shelter.find';
 var apiKey = "0d60940cc1ebb2a47f2f53bd4ec5f607"	
 // var zip = [66212, 10001]
     // Within $.ajax{...} is where we fill out our query 
@@ -67,7 +67,7 @@ function bindButtons(){
         event.preventDefault();
         var dropdown = document.getElementById('animus').value;
         var zip = [66212, 10001]; // this line gets the zip code from the form entry
-        var url = 'http://api.petfinder.com/pet.find';
+        var url = 'https://api.petfinder.com/pet.find';
         zip.forEach(function(zipper){
             $.ajax({
                 url: url,
