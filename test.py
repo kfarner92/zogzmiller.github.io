@@ -29,7 +29,6 @@ browser.find_by_id('submitZip').click()
 time.sleep(10)
 listings = browser.find_by_tag('li')
 
-tags = []
 for i in listings:
         cats = []
         text = i.text.split('^ ')
