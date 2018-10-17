@@ -94,12 +94,12 @@ function bindButtons(){
                             let sex = value.sex.$t;
                             let id = value.id.$t
                             let newDiv = body.append("li")
-                            newDiv.text(`name: ${name},
-                            id: ${id},
-                            age: ${age},
-                            animal: ${animal},
-                            shelterId: ${shelterId},
-                            sex: ${sex},
+                            newDiv.text(`name: ${name}^
+                            id: ${id}^
+                            age: ${age}^
+                            animal: ${animal}^
+                            shelterId: ${shelterId}^
+                            sex: ${sex}^
                             website: https://www.petfinder.com/petdetail/${id}`);
                         });
                     });

@@ -32,9 +32,9 @@ listings = browser.find_by_tag('li')
 tags = []
 for i in listings:
         cats = []
-        text = i.text.split(', ')
+        text = i.text.split('^ ')
         for x in range(7):
-                value = text[x].split(': ')[1]
+                value = str(text[x].split(': ')[1])
                 cats.append(value)
                 print(value)
         # c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
