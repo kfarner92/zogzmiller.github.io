@@ -28,22 +28,19 @@ browser.visit('https://zogzmiller.github.io/')
 browser.find_by_id('submitZip').click()
 time.sleep(30)
 listings = browser.find_by_tag('li')
-cats = []
+
 tags = []
 for i in listings:
-
+        cats = []
         text = i.text.split(', ')
         for x in range(7):
-                value = text[x].split(': ')
-                for v in range(len(value)):
-                        try:
-                                tags.append(v[0])
-                                cats.append(v[1])
-                        except IndexError:
-                                next
-        # c.execute(f"INSERT INTO cats VALUES ('{cats[0]}','{cats[1]}','{cats[2]}','{cats[3]}','{cats[4}','{cats[5]}','{cats[6]}')")
+                value = text[x].split(': ')[1]
+                cats.append(value)
+                print(value)
+        # c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
+        c.execute(f'INSERT INTO cats VALUES ("{cats[0]}","{cats[1]}","{cats[2]}","{cats[3]}","{cats[4]}","{cats[5]}","{cats[6]}")')
         # c.execute(f"INSERT INTO cats VALUES ('{cats}')")
-c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
+# c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
 
 conn.commit()
 
