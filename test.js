@@ -78,7 +78,7 @@ function bindButtons(){
                     animal: dropdown,
                     'location': zipper,
                     output: 'basic',
-                    count: 10,
+                    count: 1000,
                     format: 'json'
                 },
                 success: function( response ) {
