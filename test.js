@@ -53,7 +53,7 @@
 //   .done(function(petApiData) { alert('Data retrieved!'; })
 //   .error(function(err) { alert('Error retrieving data!'); 
 // });
-// 96701, 99703, 30301, 66212, 10001, 60007, 80014, 83701, 90001, 58501
+// 96701, 99703, 30301, 83701, 66212, 10001, 60007, 80014, 90001, 58501
 var shelterIds = []
 document.addEventListener('DOMContentLoaded', bindButtons);
 // var url = 'https://api.petfinder.com/shelter.find';
@@ -66,7 +66,7 @@ function bindButtons(){
     document.getElementById('submitZip').addEventListener('click', function(event){
         event.preventDefault();
         var dropdown = document.getElementById('animus').value;
-        var zip = [30301]; // this line gets the zip code from the form entry
+        var zip = [60007]; // this line gets the zip code from the form entry
         var url = 'https://api.petfinder.com/pet.find';
         zip.forEach(function(zipper){
             $.ajax({
