@@ -75,10 +75,10 @@ function bindButtons(){
                 dataType: "jsonp",
                 data: {
                     key: apiKey,
-                    animal: dropdown,
+                    animal: "Dogs",
                     'location': zipper,
                     output: 'basic',
-                    count: 1000,
+                    count: 10,
                     format: 'json'
                 },
                 success: function( response ) {
@@ -87,6 +87,17 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
+                            let breeds = []
+                            if (value.breeds.breed.length > 1){
+                                for (var b = 0; b < value.breeds.breed.length; b++) {
+                                    var breed1 = (value.breeds.breed[0].$t);
+                                    var breed2 = (value.breeds.breed[1].$t);
+                                     }
+                                breeds.push(`${breed1} / ${breed2}`);
+                            }
+                            else {
+                                breeds.push(value.breeds.breed.$t);
+                            }
                             let age = value.age.$t;
                             let name = value.name.$t;
                             let animal = value.animal.$t;
@@ -97,6 +108,7 @@ function bindButtons(){
                             newDiv.text(`name: ${name}^
                             id: ${id}^
                             age: ${age}^
+                            breed: ${breeds}^
                             animal: ${animal}^
                             shelterId: ${shelterId}^
                             sex: ${sex}^
