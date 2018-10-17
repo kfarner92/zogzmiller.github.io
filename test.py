@@ -26,7 +26,7 @@ browser = Browser('chrome')
 # url = "https://zogzmiller.github.io/"
 browser.visit('https://zogzmiller.github.io/')
 browser.find_by_id('submitZip').click()
-time.sleep(30)
+time.sleep(10)
 listings = browser.find_by_tag('li')
 
 tags = []
@@ -34,9 +34,13 @@ for i in listings:
         cats = []
         text = i.text.split('^ ')
         for x in range(7):
-                value = str(text[x].split(': ')[1])
-                cats.append(value)
-                print(value)
+                value = text[x].split(': ')[1]
+                if '"' in value:
+                        standin = 'Doug Funny'
+                        cats.append(standin)
+                else:
+                        cats.append(value)
+                        print(value)
         # c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
         c.execute(f'INSERT INTO cats VALUES ("{cats[0]}","{cats[1]}","{cats[2]}","{cats[3]}","{cats[4]}","{cats[5]}","{cats[6]}")')
         # c.execute(f"INSERT INTO cats VALUES ('{cats}')")
