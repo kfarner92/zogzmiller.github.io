@@ -17,8 +17,8 @@ from sqlalchemy.orm import relationship, sessionmaker
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
 
-c.execute('''CREATE TABLE cats
-        (name text, id text, age text, animal text, shelterID text, sex text, website text)''')
+# c.execute('''CREATE TABLE cats
+#         (name text, id text, age text, animal text, shelterID text, sex text, website text)''')
 
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 # def scrape():
