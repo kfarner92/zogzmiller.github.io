@@ -102,28 +102,8 @@ function bindButtons(){
                             website: https://www.petfinder.com/petdetail/${id}`);
                         });
                     });
-                //     let petArray = response.petfinder.pets.pet;
-                //     for(var i = 0; i < petArray.length; i++){
-                //         console.log(i)
-                //         var newDiv = body.append('div')
-                //         var newP = body.append('p')
-                        
-                // }
                 }
             });
         }) 
     }) 
 }
-
-
-// let breeds = []
-// if (value.breeds.breed.length > 1){
-//     for (var b = 0; b < value.breeds.breed.length; b++) {
-//         var breed1 = (value.breeds.breed[0].$t);
-//         var breed2 = (value.breeds.breed[1].$t);
-//          }
-//     breeds.push(`${breed1} / ${breed2}`);
-// }
-// else {
-//     breeds.push(value.breeds.breed.$t);
-// }
