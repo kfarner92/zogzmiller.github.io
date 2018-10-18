@@ -30,6 +30,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
+                            let breeds = []
                             let age = value.age.$t;
                             let name = value.name.$t;
                             let animal = value.animal.$t;
@@ -37,6 +38,17 @@ function bindButtons(){
                             let sex = value.sex.$t;
                             let id = value.id.$t;
                             let newDiv = body.append("li");
+                            if (value.breeds.breed.length > 1){
+                                for (var b = 0; b < value.breeds.breed.length; b++) {
+                                    var breed1 = (value.breeds.breed[0].$t);
+                                    var breed2 = (value.breeds.breed[1].$t);
+                            }
+                                breeds.push(`${breed1} / ${breed2}`);
+                        }
+                            else {
+                                breeds.push(value.breeds.breed.$t);
+                            }
+
                             newDiv.text(`name: ${name}^
                             id: ${id}^
                             age: ${age}^
