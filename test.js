@@ -86,7 +86,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            let breeds = []
+                            let breedtype = []
                             let breed1;
                             let breed2;
                             let age = value.age.$t;
@@ -100,15 +100,15 @@ function bindButtons(){
                                     breed1 = (value.breeds.breed[0].$t);
                                     breed2 = (value.breeds.breed[1].$t);
                             }
-                                breeds.push(`${breed1} / ${breed2}`);
+                                breedtype.push(`${breed1} / ${breed2}`);
                         }
                             else {
-                                breeds.push(value.breeds.breed.$t);
+                                breedtype.push(value.breeds.breed.$t);
                             }
                             let newDiv = body.append("li");
                             newDiv.text(`name: ${name}^
                             id: ${id}^
-                            breed: ${breeds}^
+                            breed: ${breedtype}^
                             age: ${age}^
                             animal: ${animal}^
                             shelterId: ${shelterId}^
