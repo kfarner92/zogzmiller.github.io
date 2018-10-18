@@ -65,7 +65,7 @@ function bindButtons(){
     document.getElementById('submitZip').addEventListener('click', function(event){
         event.preventDefault();
         var dropdown = document.getElementById('animus').value;
-        var zip = [60007]; // this line gets the zip code from the form entry
+        var zip = [10001]; // this line gets the zip code from the form entry
         var url = 'https://api.petfinder.com/pet.find';
         zip.forEach(function(zipper){
             $.ajax({
