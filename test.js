@@ -86,6 +86,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
+                            let breeds = value.breeds.breed.$t;
                             let age = value.age.$t;
                             let name = value.name.$t;
                             let animal = value.animal.$t;
@@ -95,6 +96,7 @@ function bindButtons(){
                             let newDiv = body.append("li");
                             newDiv.text(`name: ${name}^
                             id: ${id}^
+                            breed: ${breeds}^
                             age: ${age}^
                             animal: ${animal}^
                             shelterId: ${shelterId}^
