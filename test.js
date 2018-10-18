@@ -86,17 +86,16 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log(value.breeds.breed)
                             let breeds = []
-                            if (value.breeds.length > 1){
-                                for (var b = 0; b < value.breeds.length; b++) {
-                                    var breed1 = (value.breeds[0].$t);
-                                    var breed2 = (value.breeds[1].$t);
+                            if (value.breeds.breed.length > 1){
+                                for (var b = 0; b < value.breeds.breed.length; b++) {
+                                    var breed1 = (value.breeds.breed[0].$t);
+                                    var breed2 = (value.breeds.breed[1].$t);
                             }
                                 breeds.push(`${breed1} / ${breed2}`);
                         }
                             else {
-                                breeds.push(value.breeds.$t);
+                                breeds.push(value.breeds.breed.$t);
                             }
                             console.log(breeds)
                         });
