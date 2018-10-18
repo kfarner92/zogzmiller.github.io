@@ -31,6 +31,7 @@ function bindButtons(){
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
                             console.log(dataParsing)
+                            console.log(value)
                             let breeds = []
                             let age = value.age.$t;
                             let name = value.name.$t;
