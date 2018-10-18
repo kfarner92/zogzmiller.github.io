@@ -89,7 +89,6 @@ function bindButtons(){
                             let breeds = []
                             let breed1;
                             let breed2;
-                            let breeds = []
                             let age = value.age.$t;
                             let name = value.name.$t;
                             let animal = value.animal.$t;
