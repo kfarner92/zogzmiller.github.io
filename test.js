@@ -85,7 +85,7 @@ function bindButtons(){
                     data.push(response.petfinder.shelters.shelter);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log
+                            console.log(value)
                         });
                     });
                 }
