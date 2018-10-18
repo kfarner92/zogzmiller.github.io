@@ -86,6 +86,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
+                            console.log(dataParsing)
                             let breeds = value.breeds.breed.$t;
                             let age = value.age.$t;
                             let name = value.name.$t;
