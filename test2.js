@@ -51,7 +51,7 @@ function bindButtons(){
 
                             newDiv.text(`name: ${name}^
                             id: ${id}^
-                            breed: ${breeds}^
+                            breed: breeds^
                             age: ${age}^
                             animal: ${animal}^
                             shelterId: ${shelterId}^
