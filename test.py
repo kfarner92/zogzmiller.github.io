@@ -17,8 +17,8 @@ from sqlalchemy.orm import relationship, sessionmaker
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
 
-# c.execute('''CREATE TABLE cats
-#         (id text, name text,breed text, age text, animal text, shelterID text, sex text, website text)''')
+c.execute('''CREATE TABLE dogs
+        (id text, name text,breed text, age text, animal text, shelterID text, sex text, website text)''')
 
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 # def scrape():
@@ -30,20 +30,20 @@ time.sleep(10)
 listings = browser.find_by_tag('li')
 
 for i in listings:
-        cats = []
+        dogs = []
         text = i.text.split('^ ')
         for x in range(8):
                 value = text[x].split(': ')[1]
                 if '"' in value:
                         standin = 'Doug Funny'
-                        cats.append(standin)
+                        dogs.append(standin)
                 else:
-                        cats.append(value)
+                        dogs.append(value)
                         print(value)
-        # c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
-        c.execute(f'INSERT INTO cats VALUES ("{cats[0]}","{cats[1]}","{cats[2]}","{cats[3]}","{cats[4]}","{cats[5]}","{cats[6]}","{cats[7]}")')
-        # c.execute(f"INSERT INTO cats VALUES ('{cats}')")
-# c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
+        # c.executemany('INSERT INTO dogs VALUES (?,?,?,?,?,?,?)', dogs)
+        c.execute(f'INSERT INTO dogs VALUES ("{dogs[0]}","{dogs[1]}","{dogs[2]}","{dogs[3]}","{dogs[4]}","{dogs[5]}","{dogs[6]}","{dogs[7]}")')
+        # c.execute(f"INSERT INTO dogs VALUES ('{dogs}')")
+# c.executemany('INSERT INTO dogs VALUES (?,?,?,?,?,?,?)', dogs)
 
 conn.commit()
 
