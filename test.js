@@ -66,7 +66,7 @@ function bindButtons(){
         event.preventDefault();
         var dropdown = document.getElementById('animus').value;
         var zip = [96701]; // this line gets the zip code from the form entry
-        var url = 'https://api.petfinder.com/pet.find';
+        var url = 'https://api.petfinder.com/shelter.find';
         zip.forEach(function(zipper){
             $.ajax({
                 url: url,
@@ -74,7 +74,6 @@ function bindButtons(){
                 dataType: "jsonp",
                 data: {
                     key: apiKey,
-                    animal: dropdown,
                     'location': zipper,
                     output: 'basic',
                     count: 1000,
@@ -86,34 +85,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            let breedtype = []
-                            let breed1;
-                            let breed2;
-                            let age = value.age.$t;
-                            let name = value.name.$t;
-                            let animal = value.animal.$t;
-                            let shelterId = value.shelterId.$t;
-                            let sex = value.sex.$t;
-                            let id = value.id.$t;
-                            if (value.breeds.breed.length > 1){
-                                for (var b = 0; b < value.breeds.breed.length; b++) {
-                                    breed1 = (value.breeds.breed[0].$t);
-                                    breed2 = (value.breeds.breed[1].$t);
-                            }
-                                breedtype.push(`${breed1} / ${breed2}`);
-                        }
-                            else {
-                                breedtype.push(value.breeds.breed.$t);
-                            }
-                            let newDiv = body.append("li");
-                            newDiv.text(`id: ${id}^
-                            name: ${name}^
-                            breed: ${breedtype}^
-                            age: ${age}^
-                            animal: ${animal}^
-                            shelterId: ${shelterId}^
-                            sex: ${sex}^
-                            website: https://www.petfinder.com/petdetail/${id}`);
+                            console.log(value)
                         });
                     });
                 }
