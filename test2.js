@@ -39,15 +39,15 @@ function bindButtons(){
                             let sex = value.sex.$t;
                             let id = value.id.$t;
                             let newDiv = body.append("li");
-                            if (value.breed.length > 1){
-                                for (var b = 0; b < value.breed.length; b++) {
-                                    var breed1 = (value.breed[0].$t);
-                                    var breed2 = (value.breed[1].$t);
+                            if (value.breeds.length > 1){
+                                for (var b = 0; b < value.breeds.length; b++) {
+                                    var breed1 = (value.breeds[0].$t);
+                                    var breed2 = (value.breeds[1].$t);
                             }
                                 breeds.push(`${breed1} / ${breed2}`);
                         }
                             else {
-                                breeds.push(value.breed.$t);
+                                breeds.push(value.breeds.$t);
                             }
 
                             newDiv.text(`name: ${name}^
