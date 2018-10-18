@@ -86,10 +86,8 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log(value.breeds.breed);
                             let breeds = value.breeds.breed.$t;
-                            let newDiv = body.append("li");
-                            newDiv.text(`${breeds}`)
+                            console.log(breeds)
                         });
                     });
                 }
