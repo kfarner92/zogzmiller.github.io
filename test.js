@@ -82,10 +82,10 @@ function bindButtons(){
                 success: function( response ) {
                     console.log(response);
                     var data = [];
-                    data.push(response.petfinder.pets.pet);
+                    data.push(response.petfinder.shelters.shelter);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log(value)
+                            console.log
                         });
                     });
                 }
