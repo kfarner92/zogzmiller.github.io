@@ -87,6 +87,9 @@ function bindButtons(){
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
                             console.log(key, value);
+                            let breeds = value.breeds.breed.$t;
+                            let newDiv = body.append("li");
+                            newDiv.text(`${breeds}`)
                         });
                     });
                 }
