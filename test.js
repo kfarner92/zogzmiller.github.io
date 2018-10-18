@@ -86,23 +86,7 @@ function bindButtons(){
                     data.push(response.petfinder.pets.pet);
                     data.forEach(function(dataParsing) {
                         Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log(dataParsing)
-                            let breeds = value.breeds.breed.$t;
-                            let age = value.age.$t;
-                            let name = value.name.$t;
-                            let animal = value.animal.$t;
-                            let shelterId = value.shelterId.$t;
-                            let sex = value.sex.$t;
-                            let id = value.id.$t;
-                            let newDiv = body.append("li");
-                            newDiv.text(`name: ${name}^
-                            id: ${id}^
-                            breed: ${breeds}^
-                            age: ${age}^
-                            animal: ${animal}^
-                            shelterId: ${shelterId}^
-                            sex: ${sex}^
-                            website: https://www.petfinder.com/petdetail/${id}`);
+                            console.log(key, value);
                         });
                     });
                 }
