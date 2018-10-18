@@ -91,8 +91,8 @@ function bindButtons(){
                             let animal = value.animal.$t;
                             let shelterId = value.shelterId.$t;
                             let sex = value.sex.$t;
-                            let id = value.id.$t
-                            let newDiv = body.append("li")
+                            let id = value.id.$t;
+                            let newDiv = body.append("li");
                             newDiv.text(`name: ${name}^
                             id: ${id}^
                             age: ${age}^
