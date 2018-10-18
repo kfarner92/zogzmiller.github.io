@@ -65,7 +65,7 @@ function bindButtons(){
     document.getElementById('submitZip').addEventListener('click', function(event){
         event.preventDefault();
         var dropdown = document.getElementById('animus').value;
-        var zip = [58501,10001]; // this line gets the zip code from the form entry
+        var zip = [96701]; // this line gets the zip code from the form entry
         var url = 'https://api.petfinder.com/pet.find';
         zip.forEach(function(zipper){
             $.ajax({
@@ -77,7 +77,7 @@ function bindButtons(){
                     animal: dropdown,
                     'location': zipper,
                     output: 'basic',
-                    count: 10,
+                    count: 1000,
                     format: 'json'
                 },
                 success: function( response ) {
@@ -106,8 +106,8 @@ function bindButtons(){
                                 breedtype.push(value.breeds.breed.$t);
                             }
                             let newDiv = body.append("li");
-                            newDiv.text(`name: ${name}^
-                            id: ${id}^
+                            newDiv.text(`id: ${id}^
+                            name: ${name}^
                             breed: ${breedtype}^
                             age: ${age}^
                             animal: ${animal}^
