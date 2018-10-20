@@ -41,8 +41,9 @@ function bindButtons(){
                     }
                         else {
                             breeds.push(value.breeds.$t);
-                            console.log(breeds)
+
                         }
+                        console.log(breeds)
                     });
                 });
             }
