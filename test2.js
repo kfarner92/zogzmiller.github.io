@@ -29,8 +29,6 @@ function bindButtons(){
                 data.push(response.petfinder.pets.pet);
                 data.forEach(function(dataParsing) {
                     Object.entries(dataParsing).forEach(function([key, value]) {
-                        console.log(dataParsing)
-                        console.log(value)
                         let breeds = []
                         let breed1;
                         let breed2;
