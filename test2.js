@@ -18,7 +18,7 @@ function bindButtons(){
             data: {
                 key: apiKey,
                 animal: dropdown,
-                'location': zipper,
+                'location': zip,
                 output: 'basic',
                 count: 1000,
                 format: 'json'
