@@ -75,7 +75,7 @@ function bindButtons(){
                 key: apiKey,
                 'location': zip,
                 output: 'basic',
-                count: 1000,
+                count: 100,
                 format: 'json'
             },
             success: function( response ) {
