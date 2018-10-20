@@ -29,10 +29,16 @@ function bindButtons(){
                 data.push(response.petfinder.pets.pet);
                 data.forEach(function(dataParsing) {
                     Object.entries(dataParsing).forEach(function([key, value]) {
-                        console.log(value.breeds.breed.$t);
                         let breeds = []
                         var breed1;
                         var breed2;
+                        let age = value.age.$t;
+                        let name = value.name.$t;
+                        let animal = value.animal.$t;
+                        let shelterId = value.shelterId.$t;
+                        let sex = value.sex.$t;
+                        let id = value.id.$t;
+                        let newDiv = body.append("li");
                         if (value.breed.length > 1){
                             for (var b = 0; b < value.breed.length; b++) {
                                 breed1 = (value.breed[0].$t);
@@ -44,7 +50,14 @@ function bindButtons(){
                             breeds.push(value.breed.$t);
 
                         }
-                        console.log(breeds)
+                        newDiv.text(`name: ${name}^
+                        id: ${id}^
+                        age: ${age}^
+                        breed: ${breeds}^
+                        animal: ${animal}^
+                        shelterId: ${shelterId}^
+                        sex: ${sex}^
+                        website: https://www.petfinder.com/petdetail/${id}`);
                     });
                 });
             }
