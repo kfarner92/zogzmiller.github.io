@@ -11,60 +11,58 @@ function bindButtons(){
         var dropdown = document.getElementById('animus').value;
         var zip = document.getElementById('zip').value;
         var url = 'https://api.petfinder.com/pet.find';
-        zip.forEach(function(zipper){
-            $.ajax({
-                url: url,
-                jsonp: "callback",
-                dataType: "jsonp",
-                data: {
-                    key: apiKey,
-                    animal: dropdown,
-                    'location': zipper,
-                    output: 'basic',
-                    count: 1000,
-                    format: 'json'
-                },
-                success: function( response ) {
-                    console.log(response);
-                    var data = [];
-                    data.push(response.petfinder.pets.pet);
-                    data.forEach(function(dataParsing) {
-                        Object.entries(dataParsing).forEach(function([key, value]) {
-                            console.log(dataParsing)
-                            console.log(value)
-                            let breeds = []
-                            let breed1;
-                            let breed2;
-                            let age = value.age.$t;
-                            let name = value.name.$t;
-                            let animal = value.animal.$t;
-                            let shelterId = value.shelterId.$t;
-                            let sex = value.sex.$t;
-                            let id = value.id.$t;
-                            let newDiv = body.append("li");
-                            if (value.breeds.length > 1){
-                                for (var b = 0; b < value.breeds.length; b++) {
-                                    var breed1 = (value.breeds[0].$t);
-                                    var breed2 = (value.breeds[1].$t);
-                            }
-                                breeds.push(`${breed1} / ${breed2}`);
+        $.ajax({
+            url: url,
+            jsonp: "callback",
+            dataType: "jsonp",
+            data: {
+                key: apiKey,
+                animal: dropdown,
+                'location': zipper,
+                output: 'basic',
+                count: 1000,
+                format: 'json'
+            },
+            success: function( response ) {
+                console.log(response);
+                var data = [];
+                data.push(response.petfinder.pets.pet);
+                data.forEach(function(dataParsing) {
+                    Object.entries(dataParsing).forEach(function([key, value]) {
+                        console.log(dataParsing)
+                        console.log(value)
+                        let breeds = []
+                        let breed1;
+                        let breed2;
+                        let age = value.age.$t;
+                        let name = value.name.$t;
+                        let animal = value.animal.$t;
+                        let shelterId = value.shelterId.$t;
+                        let sex = value.sex.$t;
+                        let id = value.id.$t;
+                        let newDiv = body.append("li");
+                        if (value.breeds.length > 1){
+                            for (var b = 0; b < value.breeds.length; b++) {
+                                var breed1 = (value.breeds[0].$t);
+                                var breed2 = (value.breeds[1].$t);
                         }
-                            else {
-                                breeds.push(value.breeds.$t);
-                            }
+                            breeds.push(`${breed1} / ${breed2}`);
+                    }
+                        else {
+                            breeds.push(value.breeds.$t);
+                        }
 
-                            newDiv.text(`name: ${name}^
-                            id: ${id}^
-                            age: ${age}^
-                            breed: ${breeds}^
-                            animal: ${animal}^
-                            shelterId: ${shelterId}^
-                            sex: ${sex}^
-                            website: https://www.petfinder.com/petdetail/${id}`);
-                        });
+                        newDiv.text(`name: ${name}^
+                        id: ${id}^
+                        age: ${age}^
+                        breed: ${breeds}^
+                        animal: ${animal}^
+                        shelterId: ${shelterId}^
+                        sex: ${sex}^
+                        website: https://www.petfinder.com/petdetail/${id}`);
                     });
-                }
-            });
-        }) 
-    }) 
+                });
+            }
+        });
+}) 
 }
