@@ -43,8 +43,8 @@ function bindButtons(){
                         let newDiv = body.append("li");
                         if (value.breeds.length > 1){
                             for (var b = 0; b < value.breeds.length; b++) {
-                                var breed1 = (value.breeds[0].$t);
-                                var breed2 = (value.breeds[1].$t);
+                                breed1 = (value.breeds[0].$t);
+                                breed2 = (value.breeds[1].$t);
                         }
                             breeds.push(`${breed1} / ${breed2}`);
                     }
