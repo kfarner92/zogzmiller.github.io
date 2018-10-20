@@ -1,12 +1,12 @@
 var shelterIds = []
 document.addEventListener('DOMContentLoaded', bindButtons);
 var apiKey = "0d60940cc1ebb2a47f2f53bd4ec5f607"	
-
+var blank = 'target="_blank"';
 function bindButtons(){
 
     document.getElementById('submitZip').addEventListener('click', function(event){
         event.preventDefault();
-        d3.selectAll("#List").remove();
+        d3.selectAll(".col-sm-2").remove();
         var dropdown = document.getElementById('animus').value;
         var counter = document.getElementById('count').value;
         var dogs = []
@@ -40,8 +40,9 @@ function bindButtons(){
 
                         var newName = document.createElement('a');
                         var newDiv = document.createElement('div');
+                        newDiv.setAttribute("class", "row")
                         newName.textContent = animalName;
-                        newName.href = 'https://www.petfinder.com/petdetail/' + id;
+                        newName.href = 'https://www.petfinder.com/petdetail/' + id + " target = `_blank`";
 
                         // newName.href = 'https://www.petfinder.com/petdetail/' + id;
 
@@ -49,7 +50,7 @@ function bindButtons(){
                         newImg.src = imglink;
 
                         var list = document.createElement("div");
-                        list.setAttribute("id", "List");
+                        list.setAttribute("class", "col-sm-2 center-block text-center");
                         document.body.appendChild(list);
 
                         newDiv.appendChild(newName);

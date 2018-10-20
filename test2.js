@@ -30,8 +30,8 @@ function bindButtons(){
                 data.forEach(function(dataParsing) {
                     Object.entries(dataParsing).forEach(function([key, value]) {
                         let breeds = []
-                        let breed1;
-                        let breed2;
+                        var breed1;
+                        var breed2;
                         let age = value.age.$t;
                         let name = value.name.$t;
                         let animal = value.animal.$t;
