@@ -40,7 +40,7 @@ function bindButtons(){
                         let id = value.id.$t;
                         let newDiv = body.append("li");
                         if (value.breeds.breed.length > 1){
-                            for (var b = 0; b < value.breed.length; b++) {
+                            for (var b = 0; b < value.breeds.breed.length; b++) {
                                 breed1 = (value.breeds.breed[0].$t);
                                 breed2 = (value.breeds.breed[1].$t);
                         }
