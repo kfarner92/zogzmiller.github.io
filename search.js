@@ -11,7 +11,7 @@ function bindButtons(){
         var counter = document.getElementById('count').value;
         var dogs = []
         var zip = document.getElementById('zip').value; // this line gets the zip code from the form entry
-        var url = 'http://api.petfinder.com/pet.find';
+        var url = 'https://api.petfinder.com/pet.find';
             $.ajax({
                 url: url,
                 jsonp: "callback",
