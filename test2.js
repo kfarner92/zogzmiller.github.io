@@ -29,22 +29,22 @@ function bindButtons(){
                 data.push(response.petfinder.pets.pet);
                 data.forEach(function(dataParsing) {
                     Object.entries(dataParsing).forEach(function([key, value]) {
-                        console.log(value.breeds.breed.$t);
-                        let breeds = []
-                        var breed1;
-                        var breed2;
-                        if (value.breed.length > 1){
-                            for (var b = 0; b < value.breed.length; b++) {
-                                breed1 = (value.breed[0].$t);
-                                breed2 = (value.breed[1].$t);
-                        }
-                            breeds.push(`${breed1} / ${breed2}`);
-                    }
-                        else {
-                            breeds.push(value.breed.$t);
+                        console.log(value.breeds.breed);
+                    //     let breeds = []
+                    //     var breed1;
+                    //     var breed2;
+                    //     if (value.breed.length > 1){
+                    //         for (var b = 0; b < value.breed.length; b++) {
+                    //             breed1 = (value.breed[0].$t);
+                    //             breed2 = (value.breed[1].$t);
+                    //     }
+                    //         breeds.push(`${breed1} / ${breed2}`);
+                    // }
+                    //     else {
+                    //         breeds.push(value.breed.$t);
 
-                        }
-                        console.log(breeds)
+                    //     }
+                    //     console.log(breeds)
                     });
                 });
             }
