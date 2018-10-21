@@ -13,16 +13,17 @@ from sqlalchemy import (Column, Float, ForeignKey, Integer, MetaData, Numeric,
                         String, Text, create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
-zippers = [90001]
+from zipzy import zips
+data = pd.read_csv("AllZipCSV.csv")
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
-# c.execute('''CREATE TABLE shelters
-#         (id text, name text,phone text, address text, city text, state text, country text, zip text,
-#         email text, latitude text, longitude text)''')
+c.execute('''CREATE TABLE shelters
+        (id text, name text,phone text, address text, city text, state text, country text, zip text,
+        email text, latitude text, longitude text)''')
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
 # url = "https://zogzmiller.github.io/"
-for z in zippers:
+for z in zips:
     browser = Browser('chrome')
     conn = sqlite3.connect('petfinder.db') 
     c = conn.cursor()
