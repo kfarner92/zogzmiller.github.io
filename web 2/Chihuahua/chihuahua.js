@@ -18,7 +18,7 @@ var map = L.map('map').setView([37.8, -96], 4);
 				d > 25   ? '#FEB24C' :
 				d > 5   ? '#FED976' :
 							'#FFEDA0';
-
+	}
 	function style(feature) {
 		return {
 			weight: 2,
