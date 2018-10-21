@@ -13,16 +13,14 @@ from sqlalchemy import (Column, Float, ForeignKey, Integer, MetaData, Numeric,
                         String, Text, create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
-from zipzy import zips
-data = pd.read_csv("AllZipCSV.csv")
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
-c.execute('''CREATE TABLE cats
-        (id text, name text,age text, breed text, animal text, shelterId text, sex text, website text)''')
+# c.execute('''CREATE TABLE dogs
+#         (id text, name text,age text, breed text, animal text, shelterId text, sex text, website text)''')
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
-
+zippers = [90001,90211,90608]
 # url = "https://zogzmiller.github.io/"
-for z in zips:
+for z in zippers:
     browser = Browser('chrome')
     conn = sqlite3.connect('petfinder.db') 
     c = conn.cursor()
@@ -33,19 +31,19 @@ for z in zips:
     listings = browser.find_by_tag('li')
 
     for i in listings:
-            cats = []
+            dogs = []
             text = i.text.split('^ ')
             for x in range(8):
                     value = text[x].split(': ')[1]
                     if '"' in value:
                             standin = 'Doug Funny'
-                            cats.append(standin)
+                            dogs.append(standin)
                     else:
-                            cats.append(value)
-            # c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
-            c.execute(f'INSERT INTO cats VALUES ("{cats[0]}","{cats[1]}","{cats[2]}","{cats[3]}","{cats[4]}","{cats[5]}","{cats[6]}","{cats[7]}")')
-    # c.execute(f"INSERT INTO cats VALUES ('{cats}')")
-# c.executemany('INSERT INTO cats VALUES (?,?,?,?,?,?,?)', cats)
+                            dogs.append(value)
+            # c.executemany('INSERT INTO dogs VALUES (?,?,?,?,?,?,?)', dogs)
+            c.execute(f'INSERT INTO dogs VALUES ("{dogs[0]}","{dogs[1]}","{dogs[2]}","{dogs[3]}","{dogs[4]}","{dogs[5]}","{dogs[6]}","{dogs[7]}")')
+    # c.execute(f"INSERT INTO dogs VALUES ('{dogs}')")
+# c.executemany('INSERT INTO dogs VALUES (?,?,?,?,?,?,?)', dogs)
 
     conn.commit()
 
