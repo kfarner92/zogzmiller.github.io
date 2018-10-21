@@ -19,7 +19,7 @@ for (var i = 0; i < allDogs.length; i++) {
        allDogs[i].latitude,
        allDogs[i].longitude)
    )
-   .bindPopup("<h2>" + allDogs[i].dog_name + "<h2><br><h3>" + allDogs[i].breed + "<br> Age: " + allDogs[i].age + "<br>" + "<a href = " + allDogs[i].website + " target= `_blank`>" + ` Learn more about ${allDogs[i].dog_name} </a>` + "<h3>")
+   .bindPopup("<h2>" + allDogs[i].dog_id + "<h2><br><h3>" + allDogs[i].breed + "<br> Age: " + allDogs[i].age + "<br>" + "<a href = " + allDogs[i].website + " target= `_blank`>" + ` Learn more about ${allDogs[i].dog_id} </a>` + "<h3>")
  ));
 }
 
@@ -33,7 +33,7 @@ for (var i = 0; i < allCats.length; i++) {
         allCats[i].latitude,
         allCats[i].longitude)
     )
-    .bindPopup("<h2>" + allCats[i].cat_name + "<h2><br><h3>" + allCats[i].breed + "<br> Age: " + allCats[i].age + "<br>" + "<a href = " + allCats[i].website + " target= `_blank`>" + ` Learn more about ${allCats[i].cat_name} </a>` + "<h3>")
+    .bindPopup("<h2>" + allCats[i].cat_id + "<h2><br><h3>" + allCats[i].breed + "<br> Age: " + allCats[i].age + "<br>" + "<a href = " + allCats[i].website + " target= `_blank`>" + ` Learn more about ${allCats[i].cat_id} </a>` + "<h3>")
   ));
  }
 
