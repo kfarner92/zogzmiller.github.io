@@ -17,7 +17,7 @@ function bindButtons(){
             dataType: "jsonp",
             data: {
                 key: apiKey,
-                animal: 'cat',
+                animal: 'dog',
                 'location': zip,
                 output: 'basic',
                 count: 1000,
