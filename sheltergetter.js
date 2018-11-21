@@ -1,3 +1,6 @@
+document.addEventListener('DOMContentLoaded', bindButtons);
+// var url = 'https://api.petfinder.com/shelter.find';
+var apiKey = "0d60940cc1ebb2a47f2f53bd4ec5f607"	
 var body = d3.select("body")
 function bindButtons(){
     document.getElementById('submitZip').addEventListener('click', function(event){
