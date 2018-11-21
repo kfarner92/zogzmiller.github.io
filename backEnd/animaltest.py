@@ -15,19 +15,18 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
-# c.execute('''CREATE TABLE dogs
-#         (id text, name text,age text, breed text, animal text, shelterId text, sex text, website text)''')
+c.execute('''CREATE TABLE dogs
+        (name text, id text,age text, breed text, animal text, shelterId text, sex text, website text)''')
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
-zippers = [90001,90211,90608]
+zippers = open("shelterzips.txt", "r")
 # url = "https://zogzmiller.github.io/"
 for z in zippers:
-    browser = Browser('chrome')
+    browser = Browser('firefox')
     conn = sqlite3.connect('petfinder.db') 
     c = conn.cursor()
     browser.visit('https://zogzmiller.github.io/')
     browser.fill('zip', z)
     browser.find_by_id('submitZip').click()
-    time.sleep(10)
     listings = browser.find_by_tag('li')
 
     for i in listings:

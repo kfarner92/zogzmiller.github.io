@@ -20,7 +20,7 @@ function bindButtons(){
                 animal: 'dog',
                 'location': zip,
                 output: 'basic',
-                count: 500,
+                count: 100,
                 format: 'json'
             },
             success: function( response ) {

@@ -16,9 +16,9 @@ from sqlalchemy.orm import relationship, sessionmaker
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
 shelterids = []
-for row in c.execute('SELECT id from shelters'):
+for row in c.execute('SELECT zip from shelters where country == "US"'):
     if row not in shelterids:
         shelterids.append(row)
         realid = str(row)
-        idwriter = open("shelterids.txt", "a+")
+        idwriter = open("shelterzips.txt", "a+")
         idwriter.write(realid+ f"\n")
