@@ -1,0 +1,15 @@
+1542780355297	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.e4FPJ8jLSEij"
+1542780357746	Marionette	INFO	Listening on port 59059
+1542780357780	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://zogzmiller.github.io/sheltergetter.js, line 24: TypeError: response.petfinder.shelters is undefined
+1542780372336	Marionette	INFO	Stopped listening on port 59059
+1542780373933	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.geEZ5xT31PqO"
+1542780375861	Marionette	INFO	Listening on port 59115
+1542780375880	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542780387741	Marionette	INFO	Stopped listening on port 59115
+1542780389277	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.XuNElRfvaSMw"
+1542780391188	Marionette	INFO	Listening on port 59164
+1542780391238	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 15436, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 729
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
