@@ -1,6 +1,7 @@
-import pandas as pd
-data = pd.read_csv("AllZipCSV.csv", dtype={'zip':str})
-zips = []
-for index, row in data.iterrows():
-    if index % 25 == 0: 
-        zips.append(row["zip"])
+data = open("states.txt", "r")
+for state in data:
+    state = state.split(",")
+    print(state)
+    
+    newdata = open("newstates.txt", "a+")
+    newdata.write(state[0]+ f"\n")

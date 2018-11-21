@@ -13,8 +13,7 @@ from sqlalchemy import (Column, Float, ForeignKey, Integer, MetaData, Numeric,
                         String, Text, create_engine)
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
-from zipzy import zips
-data = pd.read_csv("AllZipCSV.csv")
+data = open("newstates.txt", "r")
 conn = sqlite3.connect('petfinder.db') 
 c = conn.cursor()
 c.execute('''CREATE TABLE shelters
@@ -23,12 +22,12 @@ c.execute('''CREATE TABLE shelters
 # c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
 # url = "https://zogzmiller.github.io/"
-for z in zips:
+for state in data:
     browser = Browser('chrome')
     conn = sqlite3.connect('petfinder.db') 
     c = conn.cursor()
     browser.visit('https://zogzmiller.github.io/')
-    browser.fill('zip', z)
+    browser.fill('zip', state)
     browser.find_by_id('submitZip').click()
     time.sleep(10)
     listings = browser.find_by_tag('li')
