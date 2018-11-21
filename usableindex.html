@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sarah's Angels</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #f1f1f1;
+      color: #f1f1f1;
+      padding: 5px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 5px;
+      }
+      .row.content {height:auto;}
+    }
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+  </style>
+</head>
+<iframe src="https://zogzmiller.github.io/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<audio id="player" autoplay loop>
+    <source src="https://zogzmiller.github.io/angelArms.mp3" type="audio/mp3">
+</audio>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">SA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="map.html" target = "_blank">Map</a></li>
+        <li><a href="search.html" target = "_blank">Search</a></li>
+        <li><a href="static.html" target = "_blank">Static</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">
+    <div class="col-sm-8 text-left"> 
+      <h1>Sarah's Angels</h1>
+      <hr>
+      <p>As reported by AAPA, approximately 40% of dog owners and 46% of cat owners learned about their pet through word of mouth. Sarah’s Angels wants to help spread the word by making the process of finding your "four legged friend" easier.</p>
+      <h3>Who we are helping.</h3>
+      <p>ASPCA’s latest report estimates 6.5 million companion animals enter animal shelters every year. Of those, approximately 3.3 million are dogs and 3.2 million are cats.  We estimate that the number of dogs and cats entering U.S. shelters annually has declined from approximately 7.2 million in 2011. The biggest decline was in dogs (from 3.9 million to 3.3 million). Of those 6.5 million about 710,000 animals who enter the shelters as strays are returned to their owners. Of those, 629,000 are dogs and only 90,000 are cats.</p>
+    </div>
+</div>
+<footer>
+<div class="container-fluid">
+<img src = "https://zogzmiller.github.io/pictures/Document.jpg" height = "200" width = "900"> </img>
+</div>
+</footer>
+
+</body>
+</html>

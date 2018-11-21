@@ -13,7 +13,7 @@ function bindButtons(){
                 data: {
                     key: apiKey,
                     animal: 'cat',
-                    'location': 'Kansas',
+                    'location': 'kansas',
                     output: 'basic',
                     count: 100,
                     format: 'json'
