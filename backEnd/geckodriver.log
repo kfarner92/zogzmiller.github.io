@@ -28579,3 +28579,20 @@ JavaScript error: jar:file:///Applications/Firefox.app/Contents/Resources/omni.j
 1542837786282	Marionette	INFO	Listening on port 57273
 1542837786323	Marionette	WARN	TLS certificate errors will be ignored for this session
 1542837789270	Marionette	INFO	Stopped listening on port 57273
+1542955765961	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.CtNDwtyZGDFu"
+1542955767968	Marionette	INFO	Listening on port 59668
+1542955768024	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542955772921	Marionette	INFO	Stopped listening on port 59668
+1542955774503	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.vo2EIbZG3AS5"
+1542955776485	Marionette	INFO	Listening on port 59718
+1542955776537	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542955780409	Marionette	INFO	Stopped listening on port 59718
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x160011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1542955781981	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/gy/qftkm0y535sbg296q4n9f_d00000gn/T/rust_mozprofile.du9vv2bR1tdv"
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x120016,name=PBackground::Msg_PServiceWorkerManagerConstructor) Channel error: cannot send/recv
+
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 59982, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 729
