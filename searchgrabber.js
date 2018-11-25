@@ -40,7 +40,6 @@ function bindButtons(){
                         list.setAttribute("class", "col-sm-2 center-block text-center");
                         document.body.appendChild(list);
                         list.appendChild(newImg);
-                        list.appendChild(newDiv);
 
                     });
                 });
