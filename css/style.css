@@ -72,7 +72,7 @@ body a:hover{
 	min-height: 200px;
 	background:url(../images/banner2.jpg)no-repeat center 0px;
 	background-size:cover;
-	position: relative;
+	position:relative;
 }
 .header {
     padding-top: 2em;
